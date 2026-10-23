@@ -33,6 +33,21 @@ descriptive comments) that other harnesses may ignore but do not reject.
 | **OpenAI Codex CLI** | Reads `AGENTS.md` from project root. Bash tools work as documented; some Claude-specific tool names (Read/Write/Edit) are aliased to Codex equivalents transparently. |
 | **Cline** | Loads `AGENTS.md` from project root. Skills appear as system messages; subagent delegation falls back to in-context expansion. |
 | **Aider** | Reads `AGENTS.md` if present; otherwise falls back to README. Aider does not support sub-agent dispatch; the seo-* skills run inline. |
+| **omp** | Native. Install the marketplace (`.omp-plugin/marketplace.json`), or open the repo: `.omp/config.yml` adds `skills/` to `skills.customDirectories`. `commands/seo.md` provides `/seo`. See [docs/OMP.md](docs/OMP.md). |
+
+### omp layout
+
+omp discovers this repo directly:
+
+- Skills: `skills/<name>/SKILL.md`, one level under `skills/`.
+- Agents: `agents/*.md` from the installed plugin root.
+- Slash command: `commands/seo.md` (`$ARGUMENTS` receives the rest of the line).
+- Runtime: `omp/plugin-root.ts` exports `CLAUDE_PLUGIN_ROOT`, so every
+  `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run ...` command works unchanged.
+- Cross-skill references use `skill://<skill>/<path>`. omp's Read tool does not
+  expand environment variables, so a `${CLAUDE_PLUGIN_ROOT}/skills/...` path
+  never resolves there.
+- `hooks/hooks.json` is Claude Code only; omp ignores it.
 
 ### Tool-name compatibility
 

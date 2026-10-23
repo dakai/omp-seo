@@ -36,7 +36,7 @@ merged into core during the March 2024 update).
 
 ## E-E-A-T Framework (updated Sept 2025 QRG)
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/eeat-framework.md` for full criteria and `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/eeat-scoring-guide.md` for score bands.
+Read `skill://seo/references/eeat-framework.md` for full criteria and `skill://seo/references/eeat-scoring-guide.md` for score bands.
 
 ### Experience (first-hand signals)
 - Original research, case studies, before/after results
@@ -187,7 +187,7 @@ Optimize for AI search engines (ChatGPT, Perplexity, Google AI Overviews):
 - **Multi-platform tracking:** Monitor visibility across Google AI Overviews, AI Mode, ChatGPT, Perplexity, and Bing Copilot, not just traditional rankings. Treat AI citation as a standalone KPI alongside organic rankings and traffic.
 
 **Generative Engine Optimization (GEO):**
-Per Google's AI optimization guide, "optimizing for generative AI search is optimizing for the search experience, and thus still SEO": AI Overviews and AI Mode are grounded in the same ranking and quality systems as classic Search. The optimization signals that matter (quotability, attribution, heading hierarchy, freshness) are SEO fundamentals applied to AI-search surfaces, not a separate discipline. Cross-reference the `seo-geo` skill for detailed workflows; both surfaces share the primary-source synthesis in `${CLAUDE_PLUGIN_ROOT}/skills/seo-geo/references/google-ai-optimization-guide.md`.
+Per Google's AI optimization guide, "optimizing for generative AI search is optimizing for the search experience, and thus still SEO": AI Overviews and AI Mode are grounded in the same ranking and quality systems as classic Search. The optimization signals that matter (quotability, attribution, heading hierarchy, freshness) are SEO fundamentals applied to AI-search surfaces, not a separate discipline. Cross-reference the `seo-geo` skill for detailed workflows; both surfaces share the primary-source synthesis in `skill://seo-geo/references/google-ai-optimization-guide.md`.
 
 ## Content Freshness
 

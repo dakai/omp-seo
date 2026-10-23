@@ -299,8 +299,8 @@ After completing any backlink analysis command, always offer:
 ## Reference Documentation
 
 Load on demand (do NOT load at startup):
-- `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/backlink-quality.md` -- Detailed toxic link patterns and scoring methodology (shared reference, load when analyzing toxic links or spam scores)
-- `${CLAUDE_PLUGIN_ROOT}/skills/seo/references/free-backlink-sources.md` -- Source comparison, confidence weighting, setup guides (shared reference, load when configuring free backlink APIs)
+- `skill://seo/references/backlink-quality.md` -- Detailed toxic link patterns and scoring methodology (shared reference, load when analyzing toxic links or spam scores)
+- `skill://seo/references/free-backlink-sources.md` -- Source comparison, confidence weighting, setup guides (shared reference, load when configuring free backlink APIs)
 
 ## Security
 

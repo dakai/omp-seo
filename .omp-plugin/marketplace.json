@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agricidaniel-claude-seo",
+  "owner": {
+    "name": "AgriciDaniel"
+  },
+  "metadata": {
+    "description": "Comprehensive SEO analysis for omp. 26 skills and 19 agents plus 60 bundled Python tools; optional MCP extensions ship separately in extensions/."
+  },
+  "plugins": [
+    {
+      "name": "claude-seo",
+      "source": "./",
+      "description": "Comprehensive SEO analysis for omp and Claude Code. 26 skills and 19 agents cover technical SEO, content quality, schema, sitemaps, Core Web Vitals, local SEO, backlinks, AI/GEO, ecommerce, hreflang, SXO, clustering, drift monitoring, and Google APIs.",
+      "author": {
+        "name": "AgriciDaniel",
+        "url": "https://github.com/AgriciDaniel"
+      },
+      "category": "marketing",
+      "homepage": "https://claude-seo.md",
+      "repository": "https://github.com/AgriciDaniel/claude-seo",
+      "license": "MIT"
+    }
+  ]
+}

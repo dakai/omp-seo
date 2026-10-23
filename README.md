@@ -1,5 +1,5 @@
 <!--
-  Claude SEO (claude-seo): free, open-source SEO audit plugin for Claude Code by Agrici Daniel.
+  Claude SEO (claude-seo): free, open-source SEO audit plugin for Claude Code and omp by Agrici Daniel.
   Technical SEO, Core Web Vitals, E-E-A-T, Schema.org, AI search (GEO), local SEO, e-commerce and international SEO.
   26 sub-skills and 19 specialist agents. MIT licensed.
 -->
@@ -9,7 +9,7 @@
 <h1 align="center">Claude SEO</h1>
 
 <p align="center">
-  <b>Free, open-source SEO audits inside <a href="https://claude.com/product/claude-code">Claude Code</a>.</b><br />
+  <b>Free, open-source SEO audits inside <a href="https://claude.com/product/claude-code">Claude Code</a> and omp.</b><br />
   Rank higher in Google and get cited by AI search.
 </p>
 
@@ -26,6 +26,7 @@
 <p align="center">
   <a href="https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml"><img src="https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <a href="https://claude.com/product/claude-code"><img src="https://img.shields.io/badge/Claude%20Code-Plugin-blue" alt="Claude Code plugin" /></a>
+  <a href="docs/OMP.md"><img src="https://img.shields.io/badge/omp-Plugin-blueviolet" alt="omp plugin" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
   <a href="https://github.com/AgriciDaniel/claude-seo/releases"><img src="https://img.shields.io/github/v/release/AgriciDaniel/claude-seo" alt="Version" /></a>
   <a href="tests/"><img src="https://img.shields.io/badge/tests-1077%20passing-brightgreen" alt="Tests" /></a>
@@ -37,7 +38,7 @@
   <a href="https://trendshift.io/repositories/21053"><img src="https://trendshift.io/api/badge/repositories/21053" alt="AgriciDaniel/claude-seo on Trendshift: GitHub Trending #12 Repository Of The Day" width="250" height="55" /></a>
 </p>
 
-**Claude SEO is a free SEO plugin for Claude Code.** Give it any website and it runs a full SEO audit in 10 to 15 minutes, then hands you a clear action plan, sorted by what matters most.
+**Claude SEO is a free SEO plugin for Claude Code and omp.** Give it any website and it runs a full SEO audit in 10 to 15 minutes, then hands you a clear action plan, sorted by what matters most.
 
 It checks everything a good SEO consultant would:
 
@@ -51,7 +52,7 @@ Claude SEO is built from 26 sub-skills and 19 specialist agents, and up to 17 ag
 
 ## See it in action
 
-Type `/seo` in Claude Code to see every command:
+Type `/seo` in Claude Code or omp to see every command:
 
 ![Claude SEO /seo command demo in the Claude Code terminal](screenshots/seo-command-demo.gif)
 
@@ -194,7 +195,7 @@ Want the details? Read the [methodology](skills/seo/references/thinking-framewor
 
 <img src="assets/readme/v3/install.svg" width="1200" height="420" alt="Installing Claude SEO: add the marketplace, install the plugin, 26 skills and 19 agents arrive, /seo setup readies the browser, then /seo audit starts the first level." />
 
-You need [Claude Code](https://claude.com/product/claude-code) 1.0.33 or newer. Run these three commands inside it:
+**Claude Code.** You need [Claude Code](https://claude.com/product/claude-code) 1.0.33 or newer. Run these three commands inside it:
 
 ```bash
 /plugin marketplace add AgriciDaniel/claude-seo
@@ -203,6 +204,24 @@ You need [Claude Code](https://claude.com/product/claude-code) 1.0.33 or newer. 
 ```
 
 `/seo setup` prepares everything Claude SEO needs (its own Python environment and a headless browser) without touching the rest of your system. Run `/seo doctor` any time to check it.
+
+<details>
+<summary><b>omp</b></summary>
+<br />
+
+```bash
+omp plugin marketplace add AgriciDaniel/claude-seo
+omp plugin install claude-seo@agricidaniel-claude-seo
+/skill:seo setup
+```
+
+Or skip the plugin: clone the repo and open it with `omp`. `.omp/config.yml`
+puts `skills/` on the skill path, so `/skill:seo` and every `seo-*` skill load
+without an install; run `./scripts/claude-seo setup` once to build the runtime.
+`/seo <command>` is available from `commands/seo.md`. Details in
+[docs/OMP.md](docs/OMP.md).
+
+</details>
 
 <details>
 <summary><b>Manual install: macOS and Linux</b></summary>
@@ -267,7 +286,7 @@ claude                                   # start Claude Code
 <summary><b>What is Claude SEO?</b></summary>
 <br />
 
-A free, open-source SEO audit tool that runs inside Claude Code. It checks technical SEO, Core Web Vitals, content quality, Schema.org structured data, AI search readiness, local SEO, e-commerce and international SEO, then gives you a prioritized action plan. It follows Google's own documentation, including the [AI Optimization Guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide).
+A free, open-source SEO audit tool that runs inside Claude Code or omp. It checks technical SEO, Core Web Vitals, content quality, Schema.org structured data, AI search readiness, local SEO, e-commerce and international SEO, then gives you a prioritized action plan. It follows Google's own documentation, including the [AI Optimization Guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide).
 
 </details>
 
@@ -275,7 +294,7 @@ A free, open-source SEO audit tool that runs inside Claude Code. It checks techn
 <summary><b>Is it really free?</b></summary>
 <br />
 
-Yes. It is MIT licensed, with no per-site pricing, no usage limits and no tracking. You only need Claude Code. A few optional extensions connect to paid services where you bring your own account, but everything works without them.
+Yes. It is MIT licensed, with no per-site pricing, no usage limits and no tracking. You only need Claude Code or omp. A few optional extensions connect to paid services where you bring your own account, but everything works without them.
 
 </details>
 
@@ -315,7 +334,7 @@ Crawlers like Screaming Frog crawl faster and deeper, and big SEO suites have th
 <summary><b>Does my data leave my computer?</b></summary>
 <br />
 
-Claude SEO runs inside Claude Code, so the pages and data it analyzes are sent to Claude, Anthropic's model, the same as anything else you work on in Claude Code. Reports are saved as files on your machine. No SEO service or other third party sees your data unless you connect an extension or API yourself. Besides the site you audit, some checks read public sources such as Wikipedia, Reddit and Common Crawl. See [PRIVACY.md](PRIVACY.md) for the full list.
+Claude SEO runs inside your agent harness, so the pages and data it analyzes are sent to that harness's model: Claude in Claude Code, or whichever model omp is configured to use. Reports are saved as files on your machine. No SEO service or other third party sees your data unless you connect an extension or API yourself. Besides the site you audit, some checks read public sources such as Wikipedia, Reddit and Common Crawl. See [PRIVACY.md](PRIVACY.md) for the full list.
 
 </details>
 
@@ -323,9 +342,9 @@ Claude SEO runs inside Claude Code, so the pages and data it analyzes are sent t
 <summary><b>Good to know: requirements, limits and uninstall</b></summary>
 <br />
 
-**Requirements.** Claude Code 1.0.33 or newer and Python 3.11 to 3.14. `/seo setup` installs the headless browser for you.
+**Requirements.** Claude Code 1.0.33 or newer, or omp, plus Python 3.11 to 3.14. `/seo setup` installs the headless browser for you.
 
-**Cost of a full audit.** Five agents that need more judgment run on Opus and the rest on Sonnet, so a full `/seo audit` uses more of your Claude plan than a single-page check. You can change any agent's model in its file under [`agents/`](agents/).
+**Cost of a full audit.** Five agents that need more judgment run on Opus and the rest on Sonnet, so a full `/seo audit` uses more of your Claude plan than a single-page check. You can change any agent's model in its file under [`agents/`](agents/). In omp, subagents run on your session model and agent `model` fields are ignored.
 
 **Limits.** Without Google API keys, Core Web Vitals are lab estimates and indexing is inferred from the page. Pages that load key content only after scrolling or clicking can give noisy results.
 

@@ -110,6 +110,9 @@ Google-SEO-Report-*.pdf
 
 # Claude Code local config (project-specific permissions, not for repo)
 .claude/
+
+# omp project-scoped plugin install state (.omp/config.yml stays tracked)
+.omp/plugins/
 .superpowers/
 
 # Local credential config (matomo.json etc., harness-independent API tokens)

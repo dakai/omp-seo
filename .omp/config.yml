@@ -1,0 +1,5 @@
+# omp project skills: a plain `git clone` is usable without a plugin install.
+# Scanned non-recursively, one level under each entry.
+skills:
+  customDirectories:
+    - ./skills

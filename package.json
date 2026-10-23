@@ -1,0 +1,13 @@
+{
+  "name": "claude-seo",
+  "version": "2.5.0",
+  "private": true,
+  "description": "Comprehensive SEO analysis for omp and Claude Code: 26 skills, 19 agents, 60 bundled Python tools.",
+  "license": "MIT",
+  "repository": "https://github.com/AgriciDaniel/claude-seo",
+  "omp": {
+    "extensions": [
+      "./omp/plugin-root.ts"
+    ]
+  }
+}
